@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Piramal Pharma Document Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="piramal-header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/Piramal_Pharma_Limited_Logo.jpg') }}" alt="Piramal Pharma Logo">
+        </div>
+        <div class="header-title">
+            <h1>Document Generator</h1>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="intro-section">
+            <h2>AI-Powered Document Generation</h2>
+            <p>Generate pharmaceutical documents using artificial intelligence trained on Piramal Pharma's knowledge base.</p>
+        </div>
+
+        <div class="piramal-card">
+            <div class="card-header">
+                <h3>Generate Document</h3>
+            </div>
+            <div class="card-body">
+                <form id="document-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="template-type">Document Type:</label>
+                        <select id="template-type" name="template-type" required>
+                            <option value="sop">Standard Operating Procedure (SOP)</option>
+                            <option value="protocol">Test Protocol</option>
+                            <option value="report">Analysis Report</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="requirements">Document Requirements:</label>
+                        <textarea id="requirements" 
+                                name="requirements" 
+                                placeholder="Enter specific requirements for your document..."
+                                required></textarea>
+                    </div>
+                    <button type="submit" id="generate-btn" class="piramal-btn">
+                        <span class="btn-text">Generate Document</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Generating document... This may take a minute.</p>
+        </div>
+        
+        <div class="result-container" id="result-container">
+            <div class="result-header">
+                <h3>Generated Document</h3>
+                <div class="action-buttons">
+                    <button id="download-btn" class="piramal-btn secondary-btn">
+                        Download as PDF
+                    </button>
+                </div>
+            </div>
+            <div id="result" class="result-content"></div>
+        </div>
+    </div>
+
+    <footer class="piramal-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='images/Piramal_Pharma_Limited_Logo.jpg') }}" alt="Piramal Pharma Logo">
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2025 Piramal Pharma Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="pdf-header" style="display: none;">
+        <div class="pdf-header-content">
+            <img id="piramal-logo-pdf" src="{{ url_for('static', filename='images/Piramal_Pharma_Limited_Logo.jpg') }}" alt="Piramal Pharma Logo">
+            <h1>Document Generator</h1>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>

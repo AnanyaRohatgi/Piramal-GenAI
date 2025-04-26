@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pharmaceutical Project Management Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/icon-logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="px-header">
+        <img src="/static/images/icon-logo.png" alt="Logo" class="px-logo">
+        <h1 class="px-title">Pharmaceutical Project Management Assistant</h1>
+    </header>
+    <div class="px-main-layout">
+        <aside class="px-docs-sidebar custom-scroll">
+            <h2 class="docs-title">📄 Documents Used</h2>
+            <div class="docs-search-container">
+                <input type="text" id="docs-search" placeholder="Search documents" />
+                <span class="docs-search-icon">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7" stroke="#0066cc" stroke-width="2"/>
+                        <path d="M20 20L16.65 16.65" stroke="#0066cc" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+            </div>
+            <ul class="docs-list">
+                <li data-url="https://iconuser-my.sharepoint.com/:b:/g/personal/ismail_m_iconresources_com/EZntnRj_R2dCotHifMTAEeABrlylhqMp4cemKB6a8e3s3w?e=v1j4DE"><b>1.</b> Pre-Feasibility Report for Manufacturing of Pharmaceutical Formulations in Keron Life sciences Pvt. Ltd</li>
+                <li data-url="https://iconuser-my.sharepoint.com/:b:/g/personal/ismail_m_iconresources_com/EZtRlEnns1BIvmQORAqoib4B07373z6rFpbSFUOlAyqOTw?e=f2Mv12"><b>2.</b> Pre-Feasibility Report for Expansion in Manufacturing of Pharmaceutical Formulations in RUSAN PHARMA LIMITED</li>
+                <li data-url="https://iconuser-my.sharepoint.com/:b:/g/personal/ismail_m_iconresources_com/EUNxeWCkKgFJtyrxUQ-VyB8BjjSrDFSlPlwWIbTBv3GVHA?e=h0hLe5"><b>3.</b> The Smart Manager Series Project Management at Smart Pharma Consulting</li>
+                <li data-url="https://iconuser-my.sharepoint.com/:b:/g/personal/ismail_m_iconresources_com/EUNxeWCkKgFJtyrxUQ-VyB8BjjSrDFSlPlwWIbTBv3GVHA?e=h0hLe5"><b>4.</b> ISPE Good Practice Guide: Project Management for the Pharmaceutical Industry</li>
+                <li data-url="https://iconuser-my.sharepoint.com/:b:/g/personal/ismail_m_iconresources_com/EV9UNcu1FNJFvjyYcuo7zpkB0yWS5YZhO6PzDVMlyeYyZA?e=AK4vFC"><b>5.</b> Pre-feasibility report for New synthetic organic chemical manufacturing unit by M/s. Vinati Organics Limited</li>
+                <li data-url="https://iconuser-my.sharepoint.com/:b:/g/personal/ismail_m_iconresources_com/EQ47EEAUy8BJp7le-kNfw-UB2dT4zTYlgLQ4PyDXu0wG4g?e=0nqRm7"><b>6.</b> Feasibility study of investing in innovative pharmaceutical products</li>
+            </ul>
+            
+            
+        </aside>
+        <section class="px-chat-section">
+            <div id="chat-box" class="px-chatbox custom-scroll"></div>
+            <form id="chat-form" class="px-form" autocomplete="off">
+                <textarea id="user-input" placeholder="Type your question here" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
