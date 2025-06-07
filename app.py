@@ -13,7 +13,7 @@ import html
 app = Flask(__name__)
 
 # Initialize OpenAI API
-os.environ["OPENAI_API_KEY"] = "sk-proj-IsnzuMuKUhjleGiwjtm0T3BlbkFJWT87k5UDLmryR0Oaa2eN"
+os.environ["OPENAI_API_KEY"] = "xxxxxxxx"
 
 # Initialize document processing components
 embeddings = OpenAIEmbeddings()
